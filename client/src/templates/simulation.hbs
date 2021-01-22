@@ -1,0 +1,109 @@
+{{> header }}
+<div class="container">
+    <div class="top-container">
+        <a>
+            <p>{{routerLink "home" "terug"}}</p>
+        </a>
+        <h3>Kind of ship - Size</h3>
+        <p>Date: 21-11-2019</p>
+    </div>
+
+    <canvas id="simulation-canvas" width="1000" height="1000"></canvas>
+
+    <div class="timeline" id="timeline">
+        <button class="open-timeline" id="open-timeline">Open</button>
+        <div class="timelines">
+            <div class="timeline-one">
+                <div class="timeline-line"></div>
+                <div id="timeline-data-one">
+                    <div class="defaultpoints">
+                        <p>Start</p>
+                    </div>
+                    <div class="defaultpoints">
+                        <p>Einde</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="timeline-two">
+                <div class="timeline-line"></div>
+                <div id="timeline-data-two">
+                    <div class="defaultpoints">
+                        <p>Start</p>
+                    </div>
+                    <div class="defaultpoints">
+                        <p>Einde</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-three">
+                <div class="timeline-line"></div>
+                <div id="timeline-data-three">
+                    <div class="defaultpoints">
+                        <p>Start</p>
+                    </div>
+                    <div class="defaultpoints">
+                        <p>Einde</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="input-control-container">
+        <div class="input-container">
+            <div>
+                <label>Case Data (*.xlsx)</label>
+                <label class="custom-upload">
+                    Bestand kiezen
+                    <input type="file" id="metadata-input" />
+                </label>
+            </div>
+            <div>
+                <label>Forces Data (*.csv)</label>
+                <label class="custom-upload">
+                    Bestand kiezen
+                    <input type="file" id="forces-input" />
+                </label>
+            </div>
+            <div>
+                <label>Ship coordinates (*.csv)</label>
+                <label class="custom-upload">
+                    Bestand kiezen
+                    <input type="file" id="coords-input" />
+                </label>
+            </div>
+            <div class="btn-submit">
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="controls-container">
+            <div>
+                <input type="button" id="previous" value="< previous">
+                <input type="button" id="play-pause" value="play/pause">
+                <input type="button" id="next" value="next >">
+            </div>
+            <div>
+                <label>Time: <span id="current-timepoint">0</span>s</label>
+                <input type="number" id="timepoint-input" value="0">
+            </div>
+            <div>
+                <label>Speed: <span id="current-speed"></span></label>
+                <input type="number" id="speed-input" value="0">
+            </div>
+            <div>
+                <label>FPS: <span id="current-fps"></span></label>
+            </div>
+            <div>
+                <label>Outline</label>
+                <input type="checkbox" id="switch-outline">
+                <input type="button" id="restart-bttn" value="Restart">
+            </div>
+        </div>
+    </div>
+</div>
+{{> footer }}
